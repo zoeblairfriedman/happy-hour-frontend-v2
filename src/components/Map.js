@@ -7,6 +7,7 @@ import {useDispatch} from 'react-redux'
 import {selectBar} from '../actions/selectBar'
 import {clearSelectedBar} from '../actions/clearSelectedBar'
 
+
 //separating this out keeps react from rerendering unnecessarily
 const libraries = ["places"];
 
@@ -50,9 +51,8 @@ export default function Map(props){
 
   
     return( 
-    <div >
-        <h1> Happy Hour </h1>
-        
+
+    <div>
         <Search panTo={panTo}/>
         <GoogleMap mapContainerStyle={mapContainerStyle} zoom={12.7} center={center} options={options} onLoad={onMapLoad}>
         {props.bars.map(b => (
@@ -90,7 +90,7 @@ export default function Map(props){
         )} 
        
         </GoogleMap>
-
     </div>
+   
     )
 }
