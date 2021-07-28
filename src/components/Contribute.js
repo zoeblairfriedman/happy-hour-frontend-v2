@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import { fetchGoogleBars } from '../actions/fetchGoogleBars'
-// import { useDispatch } from "react-redux";
+import { fetchGoogleBars } from '../actions/fetchGoogleBars'
+import { useDispatch } from "react-redux";
 import { useSelector } from 'react-redux'
 // import GoogleBar from './GoogleBar'
 // import BarInput from './BarInput'
@@ -8,17 +8,27 @@ import { useSelector } from 'react-redux'
 // import {ListGroup} from 'react-bootstrap';
 // import {ListGroupItem} from 'react-bootstrap';
 import {Alert} from 'react-bootstrap';
+import GoogleBarsCards from '../components/GoogleBarsCards'
 
 
 
 function Contribute() {
 
 const location = useSelector(state => state.location)
+const dispatch = useDispatch()
+const searchBars = () => {
+    const lat = location.lat
+    const lng = location.lng
+    dispatch(fetchGoogleBars(lat, lng))
+}
+
 
 if (!!location.lat){
+    searchBars()
     return (
         <div>
-            We have a location
+            Visit one of these bars and add it to our database:
+            <GoogleBarsCards/>
         </div>
     )
     } else {
