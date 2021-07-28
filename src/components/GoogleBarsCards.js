@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
-import {CardColumns, Card} from 'react-bootstrap'
+import {CardColumns, Card, Button} from 'react-bootstrap'
 
 function GoogleBarsCards(){
 
@@ -21,8 +21,11 @@ function returnBar(bar){
               <Card.Text>
               {b.vicinity}
               </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              {!!returnBar(b) ? <p>Yes</p> : <p>No</p>}   
+              {!returnBar(b) ? <Button variant="primary">
+                Add Happy Hour Information!
+                </Button> : <Button variant="secondary">
+                  Verify or Edit Happy Hour Deets!
+                  </Button>}   
             </Card.Body>
           </Card>
             )}

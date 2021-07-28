@@ -27,7 +27,6 @@ if (!!location.lat){
     searchBars()
     return (
         <div>
-            Visit one of these bars and add it to our database:
             <GoogleBarsCards/>
         </div>
     )
