@@ -14,18 +14,18 @@ class App extends React.Component {
   render () {
 
     return (
-      <Container>
         <Row>
           <Col>
-          Find a Happy Hour!
-            <MapContainer/>
+            <Container className="ml-2 mr-0">
+              <MapContainer/>
+            </Container>
           </Col>
           <Col>
-          Contribute
-            <Contribute/>
+            <Container className="my-4 mx-0">
+              <Contribute/>
+            </Container>
           </Col>
         </Row>
-      </Container>
     )
   }
 }

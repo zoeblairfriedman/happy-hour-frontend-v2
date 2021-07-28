@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React, { useState } from 'react';
 
 
 
 const GoogleBar = (props) => {
+
+    const [selected, setSelected] = useState()
+
+    function handleClick(bar){
+        setSelected(bar)
+    }
        
             if (props.bar !== null){
             return (
