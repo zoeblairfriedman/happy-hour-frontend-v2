@@ -20,7 +20,10 @@ class App extends React.Component {
           Find a Happy Hour!
             <MapContainer/>
           </Col>
-          <Col>Contribute</Col>
+          <Col>
+          Contribute
+            <Contribute/>
+          </Col>
         </Row>
       </Container>
     )
