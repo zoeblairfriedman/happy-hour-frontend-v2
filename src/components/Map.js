@@ -81,8 +81,12 @@ export default function Map(props){
                 dispatch(clearSelectedBar())
             }}>
                 <div>
-                    <p>{selectedBar.name}</p>
-                    <p>{selectedBar.details}</p>
+                    <h3>{selectedBar.name}</h3>
+                    <h6>Verified: {selectedBar.formattedVerified}</h6>
+                    <h6>Happy Days: {selectedBar.dateArray}</h6>
+                    <h6>Start: {selectedBar.formattedStart}</h6>
+                    <h6>End: {selectedBar.formattedEnd}</h6>
+                    <h6>Deals: {selectedBar.details}</h6>
                 </div>
                 </InfoWindow> 
            

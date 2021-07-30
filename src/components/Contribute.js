@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { fetchGoogleBars } from '../actions/fetchGoogleBars'
 import { useDispatch } from "react-redux";
 import { useSelector } from 'react-redux'
-// import GoogleBar from './GoogleBar'
-// import BarInput from './BarInput'
-// import BarEdit from './BarEdit'
-// import {ListGroup} from 'react-bootstrap';
-// import {ListGroupItem} from 'react-bootstrap';
 import {Alert} from 'react-bootstrap';
 import GoogleBarsCards from '../components/GoogleBarsCards'
 

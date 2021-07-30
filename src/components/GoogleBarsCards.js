@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
-import  {useState } from "react";
+import  { useState } from "react";
 import {CardColumns, Card, Button, Modal} from 'react-bootstrap'
 import BarInput from './BarInput'
 import BarEdit from './BarEdit'
@@ -16,9 +16,9 @@ const [selected, setSelected] = useState()
 
 let modalBody;
 if (!!selected && !!returnBar(selected)) {
-  modalBody = <BarEdit bar={returnBar(selected)}/>;
+  modalBody = <BarEdit bar={returnBar(selected)} handleClose={handleClose}/>;
 } else if (!!selected) {
-  modalBody = <BarInput bar={selected}/>;
+  modalBody = <BarInput bar={selected} handleClose={handleClose}/>;
 } else {
   modalBody = <p>No bar selected</p>;
 }
@@ -46,30 +46,30 @@ function returnBar(bar){
               {b.vicinity}
               </Card.Text>
               {!returnBar(b) ? <Button variant="primary" onClick={() => handleShow(b)}>
-                Add Happy Hour Information!
+                Add Details
                 </Button> : <Button variant="secondary" onClick={() => handleShow(b)}>
-                  Verify or Edit Happy Hour Deets!
+                  Verify or Edit
                   </Button>}   
             </Card.Body>
           </Card>
             )}
         </CardColumns>
 
-        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+        <Modal id="barModal" show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>HAPPY HOUR</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {modalBody}
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
 
       </>

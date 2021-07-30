@@ -36,11 +36,11 @@ class BarInput extends React.Component {
            [event.target.name]: value
         })
     }
- 
+
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addBar(this.state)
-        // perhaps i can remove it from dom here?
+        this.props.handleClose()
         this.setState({
             name: "",
             details: "",
@@ -122,7 +122,7 @@ class BarInput extends React.Component {
                     </div>
                     <input className="btn btn-primary my-3" type="submit"/>
                 </form>
-                <br></br>
+                <button onClick={() => this.props.handleClose()} className="btn btn-secondary">Close</button>
             </div>
         )
     }
