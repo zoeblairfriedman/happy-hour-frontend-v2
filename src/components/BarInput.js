@@ -59,24 +59,11 @@ class BarInput extends React.Component {
     }
 
 
-    verifyBar = (e) => {
-        e.target.className = "verified"
-        e.target.innerText = "VERIFIED!"
-        this.setState({
-         ...this.state,
-         verified: new Date()
-     })
-    }
+
 
 // this logic is crazy, please fix
     render(){
 
-        let button;
-        if (this.state.verified !== ""){
-            button = <button id="verify-button" className="btn btn-success" onClick={(e) => this.verifyBar(e)}>RE-VERIFY</button>
-        } else { 
-            button = <button id="verify-button" className="btn btn-warning" onClick={(e) => this.verifyBar(e)}>UNVERIFIED</button>
-        }
                 
         return (
             <div>
@@ -135,7 +122,6 @@ class BarInput extends React.Component {
                     </div>
                     <input className="btn btn-primary my-3" type="submit"/>
                 </form>
-                {button}
                 <br></br>
             </div>
         )
