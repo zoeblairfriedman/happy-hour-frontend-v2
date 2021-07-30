@@ -14,6 +14,16 @@ const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
 const [selected, setSelected] = useState()
 
+let modalBody;
+if (!!selected && !!returnBar(selected)) {
+  modalBody = <BarEdit bar={returnBar(selected)}/>;
+} else if (!!selected) {
+  modalBody = <BarInput bar={selected}/>;
+} else {
+  modalBody = <p>No bar selected</p>;
+}
+
+
 const handleShow = function(bar) {
   setShow(true)
   setSelected(bar)
@@ -50,7 +60,7 @@ function returnBar(bar){
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        {!!returnBar(selected) ? <BarEdit bar={returnBar(selected)}/> : <BarInput bar={selected}/>} 
+          {modalBody}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
