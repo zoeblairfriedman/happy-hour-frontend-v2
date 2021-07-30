@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { addBar } from '../actions/addBar'
+import Row from 'react-bootstrap/Row';
 
 // please move the form into it's own component! 
 
@@ -120,7 +121,9 @@ class BarInput extends React.Component {
                         <label for="details" className="h5 mt-2">Happy Hour Deals:</label>
                         <textarea value={this.state.details} className="form-control" name="details" onChange={this.handleChange}></textarea>     
                     </div>
-                    <input className="btn btn-primary my-3" type="submit"/>
+                    <Row>
+                        <input className="btn btn-primary my-3" type="submit"/>
+                    </Row>
                 </form>
                 <button onClick={() => this.props.handleClose()} className="btn btn-secondary">Close</button>
             </div>
