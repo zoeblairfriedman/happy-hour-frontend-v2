@@ -41,7 +41,6 @@ function returnBar(bar){
             <Card>
             <Card.Body>
               <Card.Title>{b.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">Other info here?</Card.Subtitle>
               <Card.Text>
               {b.vicinity}
               </Card.Text>

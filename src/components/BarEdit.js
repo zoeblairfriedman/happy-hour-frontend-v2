@@ -55,9 +55,7 @@ class BarEdit extends React.Component {
     }
 
 
-    verifyBar = (e) => {
-        e.target.className = "verified"
-        e.target.innerText = "VERIFIED!"
+    verifyBar = () => {
         this.setState({
          ...this.state,
          verified: new Date()
@@ -128,6 +126,7 @@ class BarEdit extends React.Component {
                         <label for="details" className="h5 mt-2">Happy Hour Deals:</label>
                         <textarea value={this.state.details} className="form-control" name="details" onChange={this.handleChange}></textarea>     
                     </div>
+                    <button onClick={() => this.verifyBar()} className="btn btn-warning">Verify</button>
                     <input className="btn btn-primary my-3" type="submit"/>
                     </form>
                 <button onClick={() => this.props.handleClose()} className="btn btn-secondary">Close</button>
