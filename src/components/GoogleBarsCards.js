@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
 import  { useState } from "react";
-import {CardColumns, Card, Button, Modal} from 'react-bootstrap'
+import {CardColumns, Card, Button, Modal, Container} from 'react-bootstrap'
 import BarInput from './BarInput'
 import BarEdit from './BarEdit'
 
@@ -53,23 +53,22 @@ function returnBar(bar){
           </Card>
             )}
         </CardColumns>
-
-        <Modal id="barModal" show={show} onHide={handleClose}>
+            
+       
+      
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header>
-          <Modal.Title>HAPPY HOUR</Modal.Title>
+          {!!selected ? <Modal.Title>{selected.name}</Modal.Title> : <Modal.Title>No Bar Selected</Modal.Title>}
         </Modal.Header>
-        <Modal.Body>
-          {modalBody}
+        <Modal.Body className="text-white">
+          <div className="modalBody">
+            {modalBody}
+          </div>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer> */}
       </Modal>
+
+      
+       
 
       </>
     )

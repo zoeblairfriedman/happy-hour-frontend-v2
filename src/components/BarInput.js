@@ -69,8 +69,7 @@ class BarInput extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <h2>{this.state.name}</h2>
-                    <div className="mb-3">
+                    <div>
                         <label for="website">Website:</label>
                         <input type="text" className="form-control" id="website" value={this.state.website} name="website" onChange={this.handleChange} />
                     </div>

@@ -87,6 +87,7 @@ export default function Map(props){
                     <h6>Start: {selectedBar.formattedStart}</h6>
                     <h6>End: {selectedBar.formattedEnd}</h6>
                     <h6>Deals: {selectedBar.details}</h6>
+                    {selectedBar.phone !== 0 ? <h6>Phone Number: {selectedBar.phone}</h6> : <h7>(No phone listed)</h7>}
                 </div>
                 </InfoWindow> 
            
