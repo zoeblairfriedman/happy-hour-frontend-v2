@@ -26,7 +26,7 @@ class BarInput extends React.Component {
         sunday: false,
         start: "",
         end: "",
-        verified: ""
+        verified: new Date()
     }
 
     handleChange = (event) => {
@@ -58,8 +58,6 @@ class BarInput extends React.Component {
             end: undefined
         })
     }
-
-
 
 
 // this logic is crazy, please fix
