@@ -27,7 +27,7 @@ if (!!location.lat){
     )
     } else {
         return (
-            <Alert variant="success">
+            <Alert variant="primary">
             <Alert.Heading>Looking for a Happy Hour?</Alert.Heading>
             <p>
               Happy Hours verified by users show up as Tropical Drinks on our map!

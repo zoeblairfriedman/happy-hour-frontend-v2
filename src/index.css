@@ -16,7 +16,7 @@ code {
 .search {
   position: relative;
   top: 2.7rem;
-  left: 92%;
+  left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 300px;
