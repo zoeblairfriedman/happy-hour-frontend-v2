@@ -59,6 +59,7 @@ function returnBar(bar){
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           {!!selected ? <Modal.Title>{selected.name}</Modal.Title> : <Modal.Title>No Bar Selected</Modal.Title>}
+          <button onClick={() => handleClose()} className="btn btn-secondary">Close</button>
         </Modal.Header>
         <Modal.Body className="text-white">
           <div className="modalBody">

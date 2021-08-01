@@ -124,7 +124,6 @@ class BarInput extends React.Component {
                         <input className="btn btn-primary my-3" type="submit"/>
                     </Row>
                 </form>
-                <button onClick={() => this.props.handleClose()} className="btn btn-secondary">Close</button>
             </div>
         )
     }

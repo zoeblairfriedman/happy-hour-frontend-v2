@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { editBar } from '../actions/editBar'
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 class BarEdit extends React.Component {
@@ -126,12 +127,11 @@ class BarEdit extends React.Component {
                         <label for="details" className="h5 mt-2">Happy Hour Deals:</label>
                         <textarea value={this.state.details} className="form-control" name="details" onChange={this.handleChange}></textarea>     
                     </div>
-                 
+                    <Row className="my-2">
                         <button onClick={() => this.verifyBar()} className="btn btn-warning">Verify</button>
                         <input className="btn btn-primary" type="submit"/>
-                 
+                    </Row>
                     </form>
-                <button onClick={() => this.props.handleClose()} className="btn btn-secondary mt-2">Close</button>
             </div>
         )
     }

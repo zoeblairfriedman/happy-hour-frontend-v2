@@ -14,6 +14,7 @@ class App extends React.Component {
   render () {
 
     return (
+      <Container className="border border-success rounded mt-3 pb-4">
         <Row>
           <Col>
             <Container className="ml-2 mr-0">
@@ -26,6 +27,8 @@ class App extends React.Component {
             </Container>
           </Col>
         </Row>
+      </Container>
+
     )
   }
 }
