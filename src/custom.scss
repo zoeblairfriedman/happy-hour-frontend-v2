@@ -1,0 +1,17 @@
+// Override default variables before the import
+
+$theme-colors: (
+  "primary": #eb008b,
+  "warning": #fff100,
+  "success": #00aeef,
+  "secondary":  #7abf3b
+);
+// $theme-colors: (
+//   "primary": #00aeef,
+//   "warning": #fff100,
+//   "success": #eb008b,
+//   "secondary":  #7abf3b
+// );
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

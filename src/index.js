@@ -7,7 +7,7 @@ import thunk from 'redux-thunk'
 import reducer from './reducers/reducer'
 import {Provider} from 'react-redux'
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './custom.scss';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))

@@ -44,9 +44,9 @@ function returnBar(bar){
               <Card.Text>
               {b.vicinity}
               </Card.Text>
-              {!returnBar(b) ? <Button variant="primary" onClick={() => handleShow(b)}>
+              {!returnBar(b) ? <Button variant="primary text-white" onClick={() => handleShow(b)}>
                 Add Details
-                </Button> : <Button variant="secondary" onClick={() => handleShow(b)}>
+                </Button> : <Button variant="secondary text-white" onClick={() => handleShow(b)}>
                   Verify or Edit
                   </Button>}   
             </Card.Body>
@@ -57,9 +57,9 @@ function returnBar(bar){
        
       
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header>
-          {!!selected ? <Modal.Title>{selected.name}</Modal.Title> : <Modal.Title>No Bar Selected</Modal.Title>}
-          <button onClick={() => handleClose()} className="btn btn-secondary">Close</button>
+        <Modal.Header className="bg-success">
+          {!!selected ? <Modal.Title className="text-white">{selected.name}</Modal.Title> : <Modal.Title>No Bar Selected</Modal.Title>}
+          <button onClick={() => handleClose()} className="btn btn-warning">Close</button>
         </Modal.Header>
         <Modal.Body className="text-white">
           <div className="modalBody">

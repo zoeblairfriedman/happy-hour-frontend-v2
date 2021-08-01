@@ -21,7 +21,7 @@ class App extends React.Component {
           <Logo/>
         </Col>
         <Col className="col-lg-10">
-          <Container className="bg-warning border border-primary rounded mt-3 pb-4">
+          <Container className="border border-primary rounded mt-3 pb-4">
               <Row>
                 <Col>
                   <Container className="ml-2 mr-0">

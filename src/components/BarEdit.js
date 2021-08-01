@@ -129,7 +129,7 @@ class BarEdit extends React.Component {
                     </div>
                     <Row className="my-2">
                         <button onClick={() => this.verifyBar()} className="btn btn-warning">Verify</button>
-                        <input className="btn btn-primary" type="submit"/>
+                        <input className="btn btn-primary text-white" type="submit"/>
                     </Row>
                     </form>
             </div>

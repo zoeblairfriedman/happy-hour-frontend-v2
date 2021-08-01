@@ -119,7 +119,7 @@ class BarInput extends React.Component {
                         <textarea value={this.state.details} className="form-control" name="details" onChange={this.handleChange}></textarea>     
                     </div>
                     <Row>
-                        <input className="btn btn-primary my-3" type="submit"/>
+                        <input className="btn btn-primary my-3 text-white" type="submit"/>
                     </Row>
                 </form>
             </div>
