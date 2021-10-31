@@ -6,6 +6,9 @@ Powered by Google! This App uses both the GoogleMaps AND GooglePlaces APIs to sh
 ### FRONT END REPO!   
 As of August 2021 this Repo contains only the Front End code of the Happy Hour application. Rails Backend code here --> https://github.com/zoeblairfriedman/happy-hour-react 
 
+### DEMO
+https://youtu.be/e-7mf6uKKZA
+
 ### CORS Extension
 Currently you will need a CORS Changer extension to conduct necessary Google API searches. We recommend: https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc
 

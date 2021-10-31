@@ -28,7 +28,7 @@ export default function Map(props){
     const dispatch = useDispatch()
     // this is from google maps API that loads the libraries from google
     const { isLoaded, loadError } = useLoadScript ({
-    googleMapsApiKey: "AIzaSyBEBEXXRvP5A3JAuZ2hL2Z2ShMPxzWeMxQ",
+    googleMapsApiKey: "APIKEYHERE",
     // googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, <-- can't get this to work
     libraries
     })

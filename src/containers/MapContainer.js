@@ -9,7 +9,6 @@ class MapContainer extends React.Component {
         this.props.fetchBarsBackend()
     }
     
-
     render (){
 
         return (
